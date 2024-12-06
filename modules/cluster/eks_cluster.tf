@@ -22,4 +22,8 @@ resource "aws_eks_cluster" "eks_cluster" {
         "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
     }
 
+    access_config {
+        authentication_mode = "API_AND_CONFIG_MAP"
+    }
+
 }
