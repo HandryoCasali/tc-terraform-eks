@@ -41,10 +41,10 @@ module "cluster" {
   aws_region            = var.aws_region
   eks_cluster_name      = var.eks_cluster_name
   eks_version           = var.eks_version
+  account_id            = var.account_id
   vpc_id                = module.network.vpc_id
   internal_subnet_1a_id = module.network.int_subnet_a_id
   internal_subnet_1b_id = module.network.int_subnet_b_id
-
 }
 
 module "nodes" {
@@ -52,7 +52,8 @@ module "nodes" {
 
   environment      = var.environment
   eks_cluster_name = var.eks_cluster_name
-
+  account_id       = var.account_id
+  
   internal_subnet_1a_id = module.network.int_subnet_a_id
   internal_subnet_1b_id = module.network.int_subnet_b_id
 

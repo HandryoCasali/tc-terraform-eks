@@ -13,6 +13,11 @@ variable "session_token" {
     type = string
     default = "{session_token}"
 }
+variable "account_id" {
+    description = "Aws account id"
+    type = string
+    default = "{account_id}"
+}
 variable "aws_region" {
     description = "Região dos recursos"
     type = string

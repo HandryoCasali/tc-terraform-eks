@@ -14,6 +14,7 @@ variable "nodes_instances_sizes" {}
 
 variable "auto_scale_options" {}
 
+variable "account_id" {}
 
 
 
